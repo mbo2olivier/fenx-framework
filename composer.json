@@ -1,0 +1,24 @@
+{
+    "name": "fenxweb/fenx",
+    "description": "A small and fully customisable PHP MVC framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivier M. Mukadi",
+            "email": "mbo2olivier@gmail.com"
+        }
+    ],
+    "require": {
+        "mukadi/fenx-core": "^0.1"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Controller\\": "controller",
+            "App\\": "model"
+        }
+    }
+}
