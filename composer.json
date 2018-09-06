@@ -12,9 +12,6 @@
     "require": {
         "mukadi/fenx-core": "^0.1"
     },
-    "config": {
-        "bin-dir": "bin"
-    },
     "autoload": {
         "psr-4": {
             "App\\Controller\\": "controller",
