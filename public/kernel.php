@@ -9,7 +9,8 @@ use Fenxweb\Fenx\Database\Database;
 use Fenxweb\Fenx\Mailer\Mailer;
 use Fenxweb\Fenx\PDF\PDF;
 use Fenxweb\Fenx\Form\Formidable;
-
+use Fenxweb\Fenx\Security\Security;
+use Fenxweb\Fenx\Security\Firewall;
 
 function getKernel() {
     $app = new Application(__DIR__."/../",true);
@@ -20,10 +21,12 @@ function getKernel() {
         ->mount(Mailer::class)
         ->mount(PDF::class)
         ->mount(Formidable::class)
+        ->mount(Security::class)
     ;
-    # mise en place des middleware
+    # mise en place des middlewares
     $app
         ->before(Router::class)
+        ->before(Firewall::class)
     ;
 
     # renvoyer l'application
