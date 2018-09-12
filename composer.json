@@ -17,5 +17,10 @@
             "App\\Controller\\": "controller",
             "App\\": "model"
         }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('config/parameters.php') || copy('config/parameters.pub.php', 'config/parameters.php');\""
+        ]
     }
 }

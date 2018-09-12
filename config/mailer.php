@@ -1,10 +1,10 @@
 <?php
 return [
     "SMTPDebug" => 2,
-    "Host" => "localhost",
+    "Host" => MAILER_HOST,
     "SMTPAuth" => true,
-    "Username" => 'user@example.com',
-    "Password" => null,
+    "Username" => MAILER_USER,
+    "Password" => MAILER_PWD,
     "SMTPSecure" => 'tls',
-    "Port" => 587
+    "Port" => MAILER_PORT
 ];

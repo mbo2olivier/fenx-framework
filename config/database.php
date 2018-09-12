@@ -1,7 +1,7 @@
 <?php
 return [
     'driver'   => 'pdo_mysql',
-    'user'     => 'root',
-    'password' => '',
-    'dbname'   => 'fenx',
+    'user'     => DB_USER,
+    'password' => DB_PWD,
+    'dbname'   => DB_NAME,
 ];
